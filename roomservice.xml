@@ -19,8 +19,10 @@
   <!-- <project name="MoKee/android_bootable_recovery-twrp" path="bootable/recovery" remote="github" revision="mkn" /> -->
   <project name="omnirom/android_bootable_recovery" path="bootable/recovery" remote="github" revision="android-7.1" />
   
-  <!-- Use qcom-audio-caf from M1cha which supports ES310 -->
-  <project path="hardware/qcom/audio-caf/es310" name="M1cha/android_hardware_qcom_audio-caf" remote="github" revision="cm-11.0-aries-cleanup" groups="qcom,qcom_audio" />
+  <!-- Use qcom-audio-caf from M1cha which supports ES310 through HAL -->
+  <remove-project name="LineageOS/android_hardware_qcom_audio" />
+  <project path="hardware/qcom/audio/default" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="papjul/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.1-caf-8974" />
 
   <!-- Remove mac os -> darwin-x86 support -->
   <remove-project name="platform/prebuilts/clang/darwin-x86/host/3.6" />
