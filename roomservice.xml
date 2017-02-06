@@ -4,7 +4,7 @@
   <remote fetch="https://bitbucket.org/" name="bb" />
   <project name="papjul/android_device_xiaomi_aries" path="device/xiaomi/aries" remote="github" revision="cm-14.1-caf" />
   <project name="papjul/android_kernel_xiaomi_aries" path="kernel/xiaomi/aries" remote="github" revision="cm-14.1-caf" />
-  <project name="proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="multirom-aries" revision="nougat" />
+  <project name="papjul/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="nougat" />
   <remove-project name="toolchain/binutils" />
   <project name="omnirom/android_external_busybox" path="external/busybox" remote="github" revision="android-7.1" />
   <project name="LineageOS/android_hardware_qcom_msm8960" path="hardware/qcom/msm8960" remote="github" revision="staging/cm-14.0" />
@@ -23,6 +23,10 @@
   <remove-project name="LineageOS/android_hardware_qcom_audio" />
   <project path="hardware/qcom/audio/default" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio" />
   <project path="hardware/qcom/audio-caf/msm8960" name="papjul/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.1-caf-8974" />
+
+  <!-- Add boringssl-compat -->
+  <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" revision="cm-14.1" />
+  <project name="M1cha/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="cm-14.1" />
 
   <!-- Remove mac os -> darwin-x86 support -->
   <remove-project name="platform/prebuilts/clang/darwin-x86/host/3.6" />
