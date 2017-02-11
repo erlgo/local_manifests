@@ -2,13 +2,13 @@
 <manifest>
   <remote fetch="https://github.com/multirom-aries" name="multirom-aries" />
   <remote fetch="https://bitbucket.org/" name="bb" />
-  <project name="papjul/android_device_xiaomi_aries" path="device/xiaomi/aries" remote="github" revision="cm-14.1-caf" />
+  <project name="papjul/android_device_xiaomi_aries" path="device/xiaomi/aries" remote="github" revision="cm-13.0-caf" />
   <project name="papjul/android_kernel_xiaomi_aries" path="kernel/xiaomi/aries" remote="github" revision="cm-14.1-caf" />
   <project name="papjul/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="nougat" />
-  <remove-project name="toolchain/binutils" />
-  <project name="omnirom/android_external_busybox" path="external/busybox" remote="github" revision="android-7.1" />
-  <project name="LineageOS/android_hardware_qcom_msm8960" path="hardware/qcom/msm8960" remote="github" revision="staging/cm-14.0" />
-  
+  <!--<remove-project name="toolchain/binutils" />-->
+  <project name="spock1104/android_external_busybox" path="external/busybox" remote="github" revision="android-6.0" />
+  <!--<project name="LineageOS/android_hardware_qcom_msm8960" path="hardware/qcom/msm8960" remote="github" revision="staging/cm-14.0" />-->
+
   <!-- Remove aosp arm-eabi-4.8, use our own fork -->
   <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" />
   <project name="multirom-aries/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="github" revision="master" />
@@ -17,7 +17,7 @@
   <!-- use twrp source from MoKee project -->
   <remove-project name="LineageOS/android_bootable_recovery" />
   <!-- <project name="MoKee/android_bootable_recovery-twrp" path="bootable/recovery" remote="github" revision="mkn" /> -->
-  <project name="omnirom/android_bootable_recovery" path="bootable/recovery" remote="github" revision="android-7.1" />
+  <project name="omnirom/android_bootable_recovery" path="bootable/recovery" remote="github" revision="android-6.0" />
   
   <!-- Use qcom-audio-caf from M1cha which supports ES310 through HAL -->
   <remove-project name="LineageOS/android_hardware_qcom_audio" />
@@ -25,24 +25,24 @@
   <project path="hardware/qcom/audio-caf/msm8960" name="papjul/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.1-caf-8974" />
 
   <!-- Add boringssl-compat -->
-  <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" revision="cm-14.1" />
-  <project name="M1cha/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="cm-14.1" />
+  <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" revision="cm-13.0" />
+  <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="cm-13.0" />
 
   <!-- Remove mac os -> darwin-x86 support -->
   <remove-project name="platform/prebuilts/clang/darwin-x86/host/3.6" />
-  <remove-project name="platform/prebuilts/clang/host/darwin-x86" />
-  <remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" />
+  <!--<remove-project name="platform/prebuilts/clang/host/darwin-x86" />
+  <remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" />-->
   <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" />
-  <remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" />
+  <!--<remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" />-->
   <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
-  <remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" />
+  <!--<remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" />
   <remove-project name="platform/prebuilts/gdb/darwin-x86" />
   <remove-project name="platform/prebuilts/go/darwin-x86" />
-  <remove-project name="platform/prebuilts/ninja/darwin-x86" />
+  <remove-project name="platform/prebuilts/ninja/darwin-x86" />-->
   <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5" />
   
   <!-- Remove unused device -->
-  <remove-project name="device/generic/goldfish" />
+  <!--<remove-project name="device/generic/goldfish" />-->
   <remove-project name="device/generic/mini-emulator-arm64" />
   <remove-project name="device/generic/mini-emulator-armv7-a-neon" />
   <remove-project name="device/generic/mini-emulator-x86" />
@@ -60,7 +60,7 @@
   <remove-project name="LineageOS/android_hardware_intel_common_libva" />
   <remove-project name="LineageOS/android_hardware_intel_common_libwsbm" />
   <remove-project name="LineageOS/android_hardware_intel_common_omx-components" />
-  <remove-project name="LineageOS/android_hardware_intel_common_utils"  />
+  <!--<remove-project name="LineageOS/android_hardware_intel_common_utils"  />-->
   <remove-project name="platform/hardware/intel/common/wrs_omxil_core" />
   <remove-project name="LineageOS/android_hardware_intel_img_hwcomposer" />
   <remove-project name="LineageOS/android_hardware_intel_img_psb_headers" />
